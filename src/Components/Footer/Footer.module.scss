@@ -1,0 +1,122 @@
+$primary: #4f46e5;
+
+.footer {
+  background: #1e1e2e;
+  color: #fff;
+  
+  margin-top: 60px;
+
+  @media (max-width: 768px) {
+    margin-top: 40px;
+  }
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 40px 0;
+  display: flex;
+  align-items: flex-start;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 32px 16px 0;
+    gap: 32px;
+  }
+}
+
+.brand {
+  flex: 1;
+  min-width: 240px;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(
+    90deg,
+    #c9b458 0%,
+    #f5e6a3 40%,
+    #fff8dc 50%,
+    #f5e6a3 60%,
+    #c9b458 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.columns {
+  display: flex;
+  gap: 60px;
+  flex: 3;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 28px;
+    width: 100%;
+  }
+}
+
+.column {
+  flex: 1;
+}
+
+.columnTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.columnList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.columnLink {
+  font-size: 14px;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.linkIcon {
+  font-size: 16px;
+  color: #777;
+}
+
+.bottom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 40px 28px;
+  margin-top: 32px;
+  border-top: 1px solid #2e2e3e;
+  font-size: 13px;
+  color: #555;
+
+  @media (max-width: 768px) {
+    padding: 20px 16px 24px;
+  }
+}

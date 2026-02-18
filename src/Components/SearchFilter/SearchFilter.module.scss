@@ -1,0 +1,93 @@
+$primary: #4f46e5;
+
+.filterCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 28px 16px;
+  max-width: 1200px;
+  width: 100%;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+
+  @media (max-width: 768px) {
+    padding: 16px;
+    border-radius: 12px;
+  }
+}
+
+.filterRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+}
+
+.filterItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1f1f1f;
+}
+
+.select {
+  width: 100%;
+  height: 40px !important;
+}
+
+.rangeGroup {
+  display: flex;
+  gap: 8px;
+}
+
+.rangeInput {
+  height: 40px;
+  flex: 1;
+  min-width: 0;
+}
+
+.searchBtn {
+  background: $primary !important;
+  border: none !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  height: 40px !important;
+  padding-inline: 32px !important;
+  font-size: 15px !important;
+  white-space: nowrap;
+  flex-shrink: 0;
+
+  &:hover {
+    background: darken($primary, 8%) !important;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.moreFilters {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $primary;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

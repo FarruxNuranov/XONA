@@ -1,0 +1,478 @@
+$primary: #4f46e5;
+
+.page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px 40px 40px;
+
+  @media (max-width: 768px) {
+    padding: 12px 16px 24px;
+  }
+}
+
+// ==================== BREADCRUMB ====================
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: #888;
+}
+
+.breadcrumbLeft {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumbLink {
+  color: #888;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.breadcrumbSep {
+  color: #ccc;
+}
+
+.date {
+  font-size: 13px;
+  color: #888;
+}
+
+// ==================== TITLE ====================
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 16px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f1f1f;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.titleActions {
+  display: flex;
+  gap: 16px;
+}
+
+.actionIcon {
+  font-size: 20px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+// ==================== GALLERY ====================
+.gallery {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 380px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.galleryMain {
+  flex: 1;
+  min-width: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    height: 220px;
+  }
+}
+
+.galleryGrid {
+  width: 380px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 180px;
+  }
+}
+
+.galleryMore {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.galleryOverlay {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+// ==================== CONTENT ====================
+.content {
+  display: flex;
+  gap: 32px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+}
+
+// ==================== TAGS ====================
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+// ==================== PRICE ====================
+.price {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1f1f1f;
+  margin-bottom: 12px;
+}
+
+// ==================== DESCRIPTION ====================
+.description {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 32px;
+}
+
+// ==================== AMENITIES ====================
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f1f1f;
+  margin-bottom: 16px;
+}
+
+.amenities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 40px;
+  margin-bottom: 16px;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.amenityItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.amenityIcon {
+  font-size: 20px;
+  width: 24px;
+  text-align: center;
+  color: #555;
+}
+
+.showAllBtn {
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  margin-bottom: 32px;
+}
+
+// ==================== MAP ====================
+.map {
+  width: 100%;
+  height: 380px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #e8e8e8;
+  margin-bottom: 32px;
+
+  @media (max-width: 768px) {
+    height: 260px;
+  }
+}
+
+// ==================== REVIEWS ====================
+.reviewsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.reviewsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.reviewCard {
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.reviewTop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.reviewAvatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e0d6c8;
+  color: #6b5a3e;
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.reviewName {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.reviewStars {
+  font-size: 12px;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.starActive {
+  color: #fadb14;
+  font-size: 13px;
+}
+
+.starInactive {
+  color: #ddd;
+  font-size: 13px;
+}
+
+.reviewText {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+// ==================== SIDEBAR ====================
+.sidebar {
+  width: 340px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.card {
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+// ==================== METRO CARD ====================
+.cardLabel {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.metroRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.metroDot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e53935;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metroName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.metroInfo {
+  font-size: 13px;
+  color: #888;
+}
+
+// ==================== OWNER CARD ====================
+.ownerRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.ownerAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f0e6d3;
+  color: #8b6914;
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ownerName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.verified {
+  color: $primary;
+  margin-left: 4px;
+}
+
+.ownerRating {
+  font-size: 13px;
+  color: #888;
+}
+
+.ownerDesc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.phoneBtn {
+  background: #1f1f1f !important;
+  border: none !important;
+  border-radius: 10px !important;
+  height: 42px !important;
+  font-weight: 600 !important;
+  margin-bottom: 8px;
+}
+
+.messageBtn {
+  border-radius: 10px !important;
+  height: 42px !important;
+  font-weight: 500 !important;
+}
+
+// ==================== BOOKING FORM ====================
+.formGroup {
+  margin-bottom: 14px;
+}
+
+.formLabel {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #1f1f1f;
+  margin-bottom: 6px;
+}
+
+.required {
+  color: #ff4d4f;
+}
+
+.formInput {
+  width: 100%;
+}
+
+.submitBtn {
+  background: #1f1f1f !important;
+  border: none !important;
+  border-radius: 10px !important;
+  height: 44px !important;
+  font-weight: 600 !important;
+  margin-top: 4px;
+}
