@@ -87,7 +87,7 @@ const listingsData = [
     area: 68,
     title: "Uchtepa 2 xonali uy",
     location: "Toshkent sh., Uchtepa tumani",
-    image: "https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop",
   },
   {
     id: 11,
