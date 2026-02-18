@@ -1,47 +1,71 @@
 .hero {
-  position: relative;
+  display: flex;
   width: 100%;
   height: 520px;
   overflow: visible;
+  position: relative;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.heroLeft {
+  flex: 1;
+  min-width: 0;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 40px 48px;
+  gap: 20px;
+  z-index: 2;
+
+  @media (max-width: 768px) {
+    padding: 24px 16px;
+  }
+}
+
+.banner {
+  width: 45%;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  background: #1a1033;
 
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    display: block;
+    object-fit: contain;
+    object-position: right center;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1px;
+    width: 120px;
+    height: 100%;
+    background: #fff;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    z-index: 1;
   }
 
   @media (max-width: 768px) {
-    height: 360px;
-  }
-}
+    width: 100%;
+    height: 220px;
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-}
-
-.heroContent {
-  position: absolute;
-  bottom: 48px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 1280px;
-  padding: 0 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-
-  @media (max-width: 768px) {
-    bottom: -160px;
-    padding: 0 16px;
+    &::before {
+      display: none;
+    }
   }
 }
 
 .title {
-  color: #fff;
+  color: #1f1f1f;
   font-size: 32px;
   font-weight: 700;
   margin: 0;
