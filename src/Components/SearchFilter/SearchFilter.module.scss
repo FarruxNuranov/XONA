@@ -1,5 +1,7 @@
 $primary: #4f46e5;
+$breakpoint: 768px;
 
+// ==================== DESKTOP FILTER ====================
 .filterCard {
   background: #fff;
   border-radius: 16px;
@@ -8,9 +10,8 @@ $primary: #4f46e5;
   width: 100%;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
 
-  @media (max-width: 768px) {
-    padding: 16px;
-    border-radius: 12px;
+  @media (max-width: $breakpoint) {
+    display: none;
   }
 }
 
@@ -18,12 +19,6 @@ $primary: #4f46e5;
   display: flex;
   align-items: flex-end;
   gap: 16px;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-  }
 }
 
 .filterItem {
@@ -70,10 +65,6 @@ $primary: #4f46e5;
   &:hover {
     background: darken($primary, 8%) !important;
   }
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
 }
 
 .moreFilters {
@@ -89,5 +80,93 @@ $primary: #4f46e5;
 
   &:hover {
     opacity: 0.8;
+  }
+}
+
+// ==================== MOBILE FILTER ====================
+.mobileFilter {
+  display: none;
+  width: 100%;
+
+  @media (max-width: $breakpoint) {
+    display: block;
+  }
+}
+
+.mobileFilterRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.mobileSearchInput {
+  flex: 1;
+  height: 44px !important;
+  border-radius: 12px !important;
+  font-size: 15px !important;
+}
+
+.mobileFilterBtn {
+  height: 44px !important;
+  border-radius: 12px !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  padding-inline: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  flex-shrink: 0;
+}
+
+// ==================== MOBILE DRAWER ====================
+.drawerContent {
+  padding: 0;
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 16px;
+}
+
+.drawerTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.drawerClose {
+  font-size: 16px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #1f1f1f;
+  }
+}
+
+.drawerFields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 24px;
+}
+
+.drawerActions {
+  padding: 20px 24px 24px;
+}
+
+.drawerSearchBtn {
+  background: $primary !important;
+  border: none !important;
+  border-radius: 12px !important;
+  height: 48px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+
+  &:hover {
+    background: darken($primary, 8%) !important;
   }
 }
