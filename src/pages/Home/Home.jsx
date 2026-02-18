@@ -42,6 +42,11 @@ const Home = () => {
         </Swiper>
       </div>
 
+      {/* Mobile filter - only visible on mobile, placed after swiper */}
+      <div className={styles.mobileFilterSection}>
+        <SearchFilter />
+      </div>
+
       <ListingsList />
     </div>
   );

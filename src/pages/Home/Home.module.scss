@@ -48,6 +48,16 @@
 
   @media (max-width: 768px) {
     display: block;
+    padding: 16px 16px 0;
+  }
+}
+
+// ==================== MOBILE FILTER SECTION ====================
+.mobileFilterSection {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
     padding: 16px;
   }
 }
